@@ -10,9 +10,17 @@ let numeroDeEntrada = document.getElementById("numeroEntrada");
 
 let mensaje = document.getElementById("mensaje")
 
+// Aca indicamos los intentos
+
+let intentos = document.getElementById("contador")
+let intento = 0
+
 // Esta accion se va a ejecutar cuando toquemos el boton chequear
 
 function chequearResultado() {
+    intento ++
+    intentos.textContent = intento
+
     let numeroIngresado = parseInt(numeroDeEntrada.value);
 
     if (numeroIngresado < 1 || numeroIngresado > 100) {
